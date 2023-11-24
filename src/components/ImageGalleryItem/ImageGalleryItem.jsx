@@ -7,7 +7,7 @@ export const ImageGalleryItem = ({ image, onclick }) => (
       src={image.webformatURL}
       alt={image.tags}
       name={image.largeImageURL}
-      className={css.ImageGalleryItemImage}
+      className={css.ImageGalleryItemPhoto}
     />
   </li>
 );
