@@ -1,16 +1,17 @@
 import css from './Modal.module.css';
 import propTypes from 'prop-types';
 
-export const Modal = ({ src, alt, handleClose }) => (
-  <div className={css.Overlay} onClick={handleClose}>
-    <div className={css.Modal}>
-      <img src={src} alt={alt} />
+export const Modal = ({ clickImage, handleClose }) => {
+  return (
+    <div onClick={() => handleClose()} className={css.Overlay}>
+      <div className={css.Modal}>
+        <img src={clickImage.largeImageURL} alt={clickImage.tags} />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 Modal.propTypes = {
-  src: propTypes.string.isRequired,
-  alt: propTypes.string.isRequired,
+  clickImage: propTypes.object.isRequired,
   handleClose: propTypes.func.isRequired,
 };
