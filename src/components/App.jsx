@@ -60,9 +60,9 @@ export class App extends Component {
     document.removeEventListener('keyup', e => {});
   }
 
-  handleImageClick = e => {
+  handleImageClick = imageID => {
     const element = this.state.images.filter(image => {
-      return image.id === e;
+      return image.id === imageID;
     });
     const clickImg = element[0];
     this.setState({ isModalOpen: true, largeImage: clickImg });

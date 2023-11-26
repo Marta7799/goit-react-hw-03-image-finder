@@ -10,7 +10,7 @@ export const Searchbar = ({ handleSubmit }) => {
         </button>
 
         <input
-          name="inputForSearch"
+          name="input"
           className={css.SearchFormInput}
           type="text"
           autoComplete="off"
